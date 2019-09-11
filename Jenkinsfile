@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
 				echo "########## Building stage started"
-                bat 'mvn clean package -B -DskipTests'
+                bat 'mvn clean compile'
 				echo "########## Building stage finished"
             }
         }
