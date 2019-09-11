@@ -25,6 +25,7 @@ pipeline {
 		stage('Deploy') {
 			steps {
 				echo "########## Deploying stage started"
+				bat 'mvn clean package -DskipTests'
 				echo "########## Deploying stage finished"
 			}
 		}
